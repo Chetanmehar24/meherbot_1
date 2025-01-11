@@ -110,12 +110,17 @@ logger = logging.getLogger(__name__)
 
 @Client.on_message(filters.group & filters.text & filters.incoming)
 async def give_filter(client, message):
-    k = await manual_filters(client, message)
-    if k == False:
-        try:
+    # k = await manual_filters(client, message)
+    # if k == False:
+    try:
+        chatID = message.chat.id
+        lazy_chatID = await db.get_chat(int(chatID))
+        if lazy_chatID['is_lazy_verified']:
             await auto_filter(client, message)
-        except Exception as e:
-            print(f"ERROR: {e}")
+    except Exception as e:
+        print(f"ERROR: {e}")
+
+
 
 @Client.on_callback_query(filters.regex('rename'))
 async def rename(bot,update):
