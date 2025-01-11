@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mehar Movie Words - Redirecting ❤</title>
+    <script>
+        // Countdown timer logic
+        let countdown = 15; // Countdown in seconds
+        // const decodedUrl = "thefileislazydeveloper"; // Dynamically inserted by the backend
+
+        function startCountdown() {
+            const countdownElement = document.getElementById("countdown");
+            const buttonElement = document.getElementById("redirectButton");
+
+            const timer = setInterval(() => {
+                if (countdown > 0) {
+                    countdownElement.textContent = `Generating link in ${countdown} seconds...`;
+                    countdown--;
+                } else {
+                    clearInterval(timer);
+                    countdownElement.textContent = "Click the button below to get file 👇";
+                    buttonElement.style.display = "block"; // Show the button
+                }
+            }, 1000);
+        }
+
+        function redirectToBot() {
+            window.location.href = decodedUrl; // Redirect to the decoded URL
+        }
+    </script>
+    <style>
+         body {
+            margin: 0;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa; /* Optional background color */
+        }
+        #redirectButton {
+            display: none; /* Initially hidden */
+            /* margin-top: 20px; */
+            padding: 10px 20px;
+            /* font-size: 16px; */
+            /* background-color: #007BFF; */
+            /* color: white;
+            border: none;
+            /* border-radius: 5px; */
+            /* cursor: pointer; */ 
+        }
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type='text/javascript' src='//staggereddam.com/33/49/13/33491358d5fde9dd516033820c2cbcb7.js'></script>
+    <script type='text/javascript' src='//staggereddam.com/6f/e7/1c/6fe71cb4803b0fb29a2c3b88f3217098.js'></script>
+</head>
+<body onload="startCountdown()" class="flex flex-col bg-black">
+
+    <div class="bg-black">
+        <!-- ad codes -->
+    </div>
+
+    <div class="w-full h-full flex flex-col justify-center items-center p-5 bg-black">
+
+        <h1 class="text-2xl font-bold  mb-4  text-white">Welcome to Mehar Movie Words !</h1>
+        <p id="countdown" class="text-xl font-semibold mb-4 text-white text-center items-center">Preparing your file...</p>
+        <!-- <button id="redirectButton" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 shadow" onclick="redirectToBot()">Get File</button> -->
+        <a id="redirectButton" class="btn btn-wide btn-outline btn-accent text-lg" href="thefileislazydeveloper" target="_blank" >📂 Get File 📂</a>
+
+    </div>
+
+    <div class="bg-black">
+        <!-- ad codes -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="justify-center items-center flex flex-col font-semibold w-full p-2 bg-black">
+        <p class="text-white">
+            👑 Owner - <a href="https://telegram.me/Hidden_Xman" target="_blank">Hidden-Xman</a> 👑
+        </p>
+        
+        <!-- Since this is free for u ! So Don't remove my credit ❤ -->
+        <p class="text-white">
+           🧩 With Love <a href="https://telegram.me/lazydeveloperr" class="font-bold underline" target="_blank">LazyDeveloper</a> ❤
+        </p>
+         
+    </footer>
+
+</body>
+</html>
