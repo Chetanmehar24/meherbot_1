@@ -348,6 +348,9 @@ async def start(client, message):
                     [
                         [
                             InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=ghost_url)
+                        ],
+                        [
+                            InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=f"https://t.me/+lI9zStHfHlllNjQ1")
                         ]
                     ]
                 )
@@ -372,6 +375,9 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [[
                     InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=ghost)
+                ],
+                [
+                    InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=f"https://t.me/+lI9zStHfHlllNjQ1")
                 ]]
             )
         )
@@ -440,6 +446,9 @@ async def start(client, message):
                     [
                         [
                             InlineKeyboardButton('📁 ᴅᴏᴡɴʟᴏᴀᴅ 📁', url=generatedurl)
+                        ],
+                        [
+                            InlineKeyboardButton('⚡ ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ⚡', url=f"https://t.me/+lI9zStHfHlllNjQ1")
                         ]
                     ]
                 )
