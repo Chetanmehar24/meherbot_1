@@ -102,8 +102,8 @@ URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '72a7f0131e5e
 # URL SHORTNER FOR USER VERIFICATION
 
 IS_LAZYUSER_VERIFICATION = is_enabled((environ.get("IS_LAZYUSER_VERIFICATION","True")), False) # make it true to enable url shortner in groups or pm
-LAZY_SHORTNER_URL = environ.get('LAZY_SHORTNER_URL', 'atglinks.com')
-LAZY_SHORTNER_API = environ.get('LAZY_SHORTNER_API', '72a7f0131e5e657e37cf7e2a9e928a616b671cf5') #Always use website url from api section 
+LAZY_SHORTNER_URL = environ.get('LAZY_SHORTNER_URL', 'linkpays.in')
+LAZY_SHORTNER_API = environ.get('LAZY_SHORTNER_API', 'd4eb0c7920a4c5b04e71d0ce9296c6f5021ba3fe') #Always use website url from api section 
 
 lazy_groups = environ.get('LAZY_GROUPS','')
 LAZY_GROUPS = [int(lazy_groups) for lazy_groups in lazy_groups.split()] if lazy_groups else None # ADD GROUP ID IN THIS VARIABLE 
