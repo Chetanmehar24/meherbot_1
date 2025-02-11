@@ -449,47 +449,47 @@ def humanbytes(size):
 
 import base64
 
-async def get_shortlink(chat_id, link):
-    original_url = link  # URL from the request
-    if not original_url:
-        return "Error: URL not provided!", 400
-
-    # Encode URL into Base64
-    DOMAIN = URL
-    encoded_url = base64.urlsafe_b64encode(original_url.encode()).decode()
-    short_url = f"{DOMAIN}getfile/{encoded_url}"
-    print(f"This is encoded url ==>{short_url}")
-    return short_url
-
 # async def get_shortlink(chat_id, link):
-#     settings = await get_settings(chat_id) #fetching settings for group
-#     if 'shortlink' in settings.keys():
-#         URL = settings['shortlink']
-#         API = settings['shortlink_api']
-#     else:
-#         URL = URL_SHORTENR_WEBSITE
-#         API = URL_SHORTNER_WEBSITE_API
-#     if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
-#         URL = URL_SHORTENR_WEBSITE
-#         API = URL_SHORTNER_WEBSITE_API
-#     if URL == "api.shareus.io":
-#         url = f'https://{URL}/easy_api'
-#         params = {
-#             "key": API,
-#             "link": link,
-#         }
-#         try:
-#             async with aiohttp.ClientSession() as session:
-#                 async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
-#                     data = await response.text()
-#                     return data
-#         except Exception as e:
-#             logger.error(e)
-#             return link
-#     else:
-#         shortzy = Shortzy(api_key=API, base_site=URL)
-#         link = await shortzy.convert(link)
-#         return link
+#     original_url = link  # URL from the request
+#     if not original_url:
+#         return "Error: URL not provided!", 400
+
+#     # Encode URL into Base64
+#     DOMAIN = URL
+#     encoded_url = base64.urlsafe_b64encode(original_url.encode()).decode()
+#     short_url = f"{DOMAIN}getfile/{encoded_url}"
+#     print(f"This is encoded url ==>{short_url}")
+#     return short_url
+
+async def get_shortlink(chat_id, link):
+    settings = await get_settings(chat_id) #fetching settings for group
+    if 'shortlink' in settings.keys():
+        URL = settings['shortlink']
+        API = settings['shortlink_api']
+    else:
+        URL = URL_SHORTENR_WEBSITE
+        API = URL_SHORTNER_WEBSITE_API
+    if URL.startswith("shorturllink") or URL.startswith("terabox.in") or URL.startswith("urlshorten.in"):
+        URL = URL_SHORTENR_WEBSITE
+        API = URL_SHORTNER_WEBSITE_API
+    if URL == "api.shareus.io":
+        url = f'https://{URL}/easy_api'
+        params = {
+            "key": API,
+            "link": link,
+        }
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                    data = await response.text()
+                    return data
+        except Exception as e:
+            logger.error(e)
+            return link
+    else:
+        shortzy = Shortzy(api_key=API, base_site=URL)
+        link = await shortzy.convert(link)
+        return link
    
 def get_readable_time(seconds: int) -> str:
     count = 0
